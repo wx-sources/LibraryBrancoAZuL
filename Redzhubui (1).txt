@@ -2678,3 +2678,26 @@ function redzlib:MakeWindow(Configs)
 end
 
 return redzlib
+
+
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui")
+local screen = Instance.new("ScreenGui")
+screen.IgnoreGuiInset = true
+screen.ResetOnSpawn = false
+screen.Parent = gui
+local img = Instance.new("ImageLabel")
+img.Size = UDim2.new(1, 0, 1, 0)
+img.Position = UDim2.new(0, 0, 0, 0)
+img.BackgroundTransparency = 1
+img.Image = "rbxassetid://5983543091"
+img.Parent = screen
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://85271883712040"
+sound.Volume = 10
+sound.Looped = false
+sound.Parent = screen
+sound:Play()
+wait(13000)
